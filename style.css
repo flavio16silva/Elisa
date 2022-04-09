@@ -1,0 +1,558 @@
+* {      
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --purple: #f06ba5;
+  --blue: #81d3f8;
+  --pink: #d32292;
+}
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  height: 500px;
+  background: var(--purple);
+}
+
+.content {
+  max-width: 1000px;
+  min-width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+nav {
+  width: 100%;
+  height: 125px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-size: 24px;
+  color: var(--blue);
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+nav ul li a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #00285f83;
+}
+
+nav ul button {
+  border: 1px solid var(--blue);
+  background: transparent;
+  padding: 8px 40px;
+  cursor: pointer;
+  margin-left: 30px;
+  color: var(--blue);
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+nav ul button:hover {
+  transition: background, color 0.6s;
+  background: var(--blue);
+  color: white;
+}
+/*Fundo azul atras da fatia*/
+.content .header-block {
+  max-width: 1000px;
+  min-width: 300px;
+  height: 450px;
+  background: var(--blue);
+  border-radius: 8px;
+  box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 10;
+  padding: 5px;
+}
+
+/*Imagem da fatia de abacaxi*/
+.header-block img {
+  width: 40%;
+  position: absolute;
+  right: 2%;
+  bottom: 2%;
+  border-radius: 30px;
+  padding: 0px 15px 15px 0px;
+}
+
+/*Texto escrito dentro do quadrado azul*/
+.header-block .text {
+  position: absolute;
+  bottom: 30%;
+  left: 15%;
+}
+
+/*O bolo perfeito para você*/
+.header-block .text h2 {
+  color: white;
+  margin-bottom: 20px;
+  text-align: right;
+  transform: translateX(-20px);
+  transition: transform 0.5s;
+}
+
+/*Texto escrito dentro do quadrado azul*/
+.header-block .text p {
+  max-width: 280px;
+  color: white;
+  text-align: justify;
+  transform: translateX(-20px);
+  transition: transform 0.4s;
+}
+
+/*Produtos do Catalogo*/
+
+section.catalog {
+  width: 100vw;
+  padding: 100px;
+}
+
+section .filter-card {
+  width: 980px;
+  height: 120px;
+  background: var(--pink);
+  border-radius: 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-input {
+  width: 720px;
+  height: 50px;
+  border: none;
+  border-radius: 4px 0px 0px 4px;
+  text-indent: 10px;
+}
+
+.search-button {
+  width: 150px;
+  height: 55px;
+  border-radius: 0px 4px 4px 0px;
+  background: var(--blue);
+  color: white;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: 0.2s ease;
+}
+
+.search-button:hover {
+  background: #f06ba5;
+  color: var(--blue);
+}
+
+.title-cake {
+  padding-top: 50px;
+  padding-bottom: 5px;
+  text-align: left;
+  margin-right: 100px;
+}
+
+/*Encontre o que deseja - Catalogo*/
+.title-wrapper-catalog {
+  margin-top: 150px;
+  padding-bottom: 40px;
+}
+
+/* repeat(auto-fill, minmax(270px, 1fr));*/
+/* Manipular a grade dos bolos Confeitados*/
+section .card-wrapper {
+  max-width: 1000px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-gap: 40px;
+  padding-top: 30px;
+  justify-content: center;
+  align-items: center;
+}
+/*Imagem dos bolos*/
+section .card-item {
+  height: 400px;
+  background: var(--purple);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+/*Inscrições com nome dos bolos */
+.card-content {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+/*Imagem bolos Confeitados dentro do card*/
+.card-item img {
+  width: 95%;
+}
+
+/*Nome dos bolos Confeitados*/
+.card-item h3 {
+  width: 90%;
+}
+
+/*Descrição dos bolos Confeitados*/
+.card-item p {
+  width: 90%;
+  font-style: italic;
+  color: #00000070;
+}
+/*Botão: Eu quero este*/
+.card-item button {
+  width: 90%;
+  padding: 15px 0px;
+  border: none;
+  background: var(--blue);
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-bottom: 10px;
+}
+
+/*Botão: Eu quero este: movimento do mouse mudando de cor*/
+.card-item button:hover {
+  background: #d32292;
+  color: var(--blue);
+}
+
+/*Titulo dos Bolos Piscina*/
+.title-piscina {
+  padding-top: 20px;
+  text-align: left;
+  margin-right: 100px;
+}
+
+/*repeat(auto-fill, minmax(270px, 1fr));*/
+/* Manipular a grade dos Bolos Piscina*/
+section .card-wrapper-piscina {
+  max-width: 1000px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-gap: 40px;
+  padding-top: 30px;
+  justify-content: left;
+  align-items: center;
+}
+
+/*Imagem dos bolos piscina*/
+section .card-item {
+  height: 400px;
+  background: var(--purple);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+/*Imagem dos Naked Cake*/
+.title-naked {
+  padding-top: 50px;
+  text-align: left;
+  margin-right: 100px;
+}
+
+/* Manipular a grade dos Naked Cakes*/
+section .card-wrapper-naked {
+  max-width: 1000px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-gap: 40px;
+  padding-top: 30px;
+  justify-content: left;
+  align-items: center;
+}
+
+/*Sobre*/
+
+.about {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 10px 10px 10px;
+}
+
+.title-wrapper-about {
+  padding: 20px 0px;
+}
+
+.about-content {
+  max-width: 1000px;
+  min-width: 300px;
+  height: 330px;
+  background: #f06ba5;
+  margin: 0 auto;
+  border-radius: 8px;
+  z-index: 10;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left {
+  width: 25%;
+  min-width: 170px;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.left img {
+  border-radius: 10px;
+}
+
+.right {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 5%;
+}
+
+.right h3 {
+  text-align: right;
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.right p {
+  max-width: 90%;
+  font-size: 1em;
+  letter-spacing: 2px;
+  text-align: justify;
+  color: rgba(8, 8, 8, 0.5);
+}
+
+/*Perfil */
+
+.features {
+  width: 100%;
+  height: 100%;
+  background: var(--purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0px;
+}
+
+.title-wrapper-features {
+  padding: 20px 0px;
+}
+
+.feature-card-block {
+  max-width: 1000px;
+  min-width: 300px;
+  height: 600px;
+  background: white;
+  margin: 0 auto;
+  border-radius: 8px;
+  z-index: 10;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  grid-gap: 30px;
+}
+
+.feature-card-item {
+  max-width: 420px;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid #dedede3b;
+  border-radius: 4px;
+}
+
+.feature-text-content {
+  max-width: 60%;
+  margin: 5px;
+}
+
+/*Footer*/
+
+footer {
+  width: 100%;
+  height: 250px;
+}
+
+footer .main {
+  width: 100%;
+  height: 200px;
+  background: var(--purple);
+  padding: 20px 10px;
+}
+
+.footer-links {
+  max-width: 1000px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/*O agrupamento de footers foi chamado para colocar uma base geral para todos */
+.footer-company,
+.footer-rental,
+.footer-contact,
+.footer-links {
+  color: white;
+  height: 100%;
+  min-height: 100px;
+}
+
+.footer-links {
+  margin-bottom: 8px;
+}
+
+.main .footer-social img {
+  width: 32px;
+  height: 32px;
+}
+
+footer .last {
+  width: 100%;
+  height: 50px;
+  background: var(--blue);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ajuste da Responsividade*/
+@media (max-width: 576px) {
+  nav ul li {
+    display: none;
+  }
+
+  .header-block img {
+    width: 70%;
+    position: absolute;
+    right: 16%;
+    top: 30%;
+  }
+
+  .header-block .text {
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+  }
+
+  section .filter-card {
+    width: 390px;
+    padding: 0px 10px;
+  }
+
+  .search-input {
+    max-width: 700px;
+    min-width: 240px;
+  }
+
+  .search-button {
+    max-width: 150px;
+    min-width: 80px;
+  }
+
+  .about {
+    margin-top: 100px;
+  }
+
+  .title-wrapper-about {
+    margin-bottom: 20px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .right {
+    width: 90%;
+  }
+
+  .right p {
+    width: 100%;
+    margin: 0px;
+    text-align: left;
+  }
+
+  .feature {
+    height: 100%;
+  }
+
+  .feature-card-block {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {
+    height: 100%;
+  }
+  footer .main {
+    height: 100%;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    padding-left: 10%;
+  }
+}
